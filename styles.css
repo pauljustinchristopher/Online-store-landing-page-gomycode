@@ -1,9 +1,11 @@
+/* General body styling */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
+/* Header styling */
 header {
     display: flex;
     justify-content: space-between;
@@ -21,6 +23,7 @@ header .logo {
     padding: 15px 20px;
 }
 
+/* Navigation menu styling */
 nav ul {
     list-style: none;
     padding: 0;
@@ -36,6 +39,7 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Product section styling */
 .product-section {
     display: flex;
     flex-wrap: wrap;
@@ -43,27 +47,30 @@ nav ul li a {
     padding: 20px;
 }
 
+/* Product card styling */
 .product-card {
     background: #f4f4f4;
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin: 10px;
-    padding: 15px;
     text-align: center;
-    width: 200px;
     transition: transform 0.2s;
+    width: 250px; /* Fixed width for cards */
+    height: 350px; /* Fixed height for cards */
+    margin: 0 auto; /* Center the card horizontally */
 }
 
 .product-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Add hover effect */
 }
 
 .product-card img {
     max-width: 100%;
-    height: auto;
+    height: 150px; /* Fixed height for images */
+    object-fit: cover; /* Ensure images fit nicely */
     border-radius: 5px;
 }
 
+/* Footer styling */
 footer {
     background: #333;
     color: #fff;
@@ -74,14 +81,60 @@ footer {
     width: 100%;
 }
 
+/* Media queries for responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 992px) {
+    .product-card {
+        width: 45%; /* Adjust card width */
+        margin-bottom: 20px;
+    }
+
+    .product-section {
+        justify-content: space-around; /* Adjust spacing */
+    }
+}
+
+/* For mobile devices */
 @media (max-width: 768px) {
     .product-section {
-        flex-direction: column;
+        flex-direction: column; /* Stack cards vertically */
         align-items: center;
     }
 
     .product-card {
-        width: 90%;
+        width: 90%; /* Make cards take up most of the screen width */
         margin-bottom: 20px;
+    }
+
+    header {
+        flex-direction: column; /* Stack header elements vertically */
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add spacing between links */
+    }
+}
+
+/* For very small devices */
+@media (max-width: 576px) {
+    .product-card {
+        width: 100%; /* Make cards full-width */
+        margin-bottom: 15px;
+    }
+
+    .product-card img {
+        height: 120px; /* Adjust image height */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Reduce footer text size */
     }
 }
