@@ -12,10 +12,13 @@ header {
     padding: 10px 0;
 }
 
+header .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
 
 .logo {
     padding: 15px 20px;
-    font-weight: bold;
 }
 
 nav ul {
@@ -58,6 +61,7 @@ nav ul li a {
 .product-card img {
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 
 footer {
@@ -78,5 +82,6 @@ footer {
 
     .product-card {
         width: 90%;
+        margin-bottom: 20px;
     }
 }
